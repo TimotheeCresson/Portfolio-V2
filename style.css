@@ -30,8 +30,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgb(8, 8, 8);
-    height: auto;
     width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 header {
     position: relative;
@@ -42,7 +43,7 @@ header {
 }
 header::before {
     content: "";
-    background-image: url(./img/pageAccueil.jpg);
+    background: url(./img/pageAccueil.jpg);
     opacity: 0.4;  
     position: absolute;
     top: 0;
@@ -54,41 +55,98 @@ header::before {
 .firstPage {
     display: flex;
     flex-direction: column;
-    justify-content: space-around; 
+    justify-content: space-between; 
     align-items: center; 
     height: 100%; /* Assure que la section occupe la hauteur complète */
 }
 .leftCorner {
     position: relative;
+    right: 30px;
+    top: 10px;
     padding: 40px;
     z-index: 10;
 }
 .leftCorner::before {
     content: '';
     position: absolute;
-    border-radius: 0 0 2em;
-    background: linear-gradient(to right, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 30%, rgba(207, 200, 200) 100%, rgba(207, 200, 200) 20%);
+    border-radius: 2em 0 2em 0;
+    /* background: linear-gradient(to right, rgba(0,0,0,0.9558441558441558) 0%, rgba(20,20,19,1) 17%, rgba(32,32,30,1) 25%, rgba(106,67,69,1) 37%, rgba(139,81,85,1) 47%, rgba(139,29,40,1) 90%, rgba(134,14,27,0.9636363636363636) 98%); */
+    background: linear-gradient(to right,rgba(212,199,199,1) 5%, rgba(193,165,165,1) 38%, rgba(201,156,158,1) 59%, rgba(139,81,85,1) 98%);
     top: 0;
     left: 0;
-    height: 20px;
-    width: 133px; /* Divise la bordure supérieure en deux parties */
+    height: 8%;
+    width: 50%; /* Divise la bordure supérieure en deux parties */
      /* Épaisseur de la bordure */
 }
 .leftCorner::after {
     content: '';
     position: absolute;
-    background: linear-gradient(to bottom, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 30%, rgb(207, 200, 200) 100%, rgba(207, 200, 200) 20%);
-    border-radius: 0 0 2em;
+    /* background: linear-gradient(to bottom, rgba(0,0,0,0.9558441558441558) 0%, rgba(20,20,19,1) 17%, rgba(32,32,30,1) 25%, rgba(106,67,69,1) 37%, rgba(139,81,85,1) 47%, rgba(139,29,40,1) 90%, rgba(134,14,27,0.9636363636363636) 98%); */
+    background: linear-gradient(to bottom,rgba(212,199,199,1) 5%, rgba(193,165,165,1) 38%, rgba(201,156,158,1) 59%, rgba(139,81,85,1) 98%);
+    border-radius: 2em 0 2em 0;
     top: 0;
     left: 0;
     height: 110px;
-    width: 20px;
+    width: 4%;
 }
 .presentation p {
-color: var(--clr--primaryColor);
-text-align: center;
+    color: var(--clr--primaryColor);
+    text-align: center;
 }
 .project {color: var(--clr--primaryColor);}
 .nameProject {
     color: var(--clr--primaryColor);
 }
+.projectContainer {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 20px;
+}
+  .projectName {
+    text-decoration: none;
+    position: relative;
+    text-decoration: none; 
+    display: inline-block; 
+    color: #fff;
+  }
+  
+  .teaStation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px; 
+    background: linear-gradient(to right, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 30%, rgba(207, 200, 200) 100%, rgba(207, 200, 200) 20%);
+  }
+  .pendu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 55%;
+    height: 2px; 
+    background: linear-gradient(to right, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 30%, rgba(207, 200, 200) 100%, rgba(207, 200, 200) 20%);
+  }
+  .morpion::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 80%;
+    height: 2px; 
+    background: linear-gradient(to right, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 30%, rgba(207, 200, 200) 100%, rgba(207, 200, 200) 20%);
+  }
+  .justePrix::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 80%;
+    height: 2px; 
+    background: linear-gradient(to right, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 30%, rgba(207, 200, 200) 100%, rgba(207, 200, 200) 20%);
+  }
+  .allProject a{
+    margin: 10px;
+  }
