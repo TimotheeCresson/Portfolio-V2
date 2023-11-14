@@ -48,3 +48,43 @@ spans.forEach(async (span) => {
 }
     lastText();
 });
+
+/* 
+======================
+    SLIDER  
+======================
+*/
+    const image = document.querySelectorAll(".sliderContainer .items")
+    console.log(image);
+    let currentImage = 0;
+
+    function showImage(selectedIndex) {
+        image.forEach(function(images, i) {
+            if(i === selectedIndex) {
+                images.style.display = "block"
+            }
+            else {
+                images.style.display = "none"
+            }
+        })
+    }
+    function nextImage() {
+        currentImage++ 
+        if(currentImage >= image.length) {
+            currentImage = 0
+        }
+        showImage(currentImage)
+    }
+    function prevImage() {
+        currentImage--
+        if(currentImage < 0) {
+            currentImage = image.length -1
+        }
+        showImage(currentImage)
+    }
+
+    const nextButton = document.querySelector(".next");
+    const prevButton = document.querySelector(".prev");
+
+    nextButton.addEventListener("click", nextImage);
+    prevButton.addEventListener("click", prevImage);
