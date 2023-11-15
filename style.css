@@ -161,6 +161,7 @@ color: var(--clr--primaryColor);
 .rightCorner {
 display: flex;
 margin-left: auto;
+animation: fromLeft 2s linear;
 }
 .rightCorner h2 {
 align-self: center;
@@ -264,6 +265,31 @@ width: 87%;
 height: 2px; 
 background: linear-gradient(to right,  rgba(0,255,224,1) 5%, rgba(68,171,157,1) 41%, rgba(88,134,128,1) 55%, rgba(87,105,103,1) 72%, rgba(72,74,74,1) 98%);
 }
+
+
+@keyframes fromLeft {
+  0%{
+      transform: translateX(-1000px);
+      opacity: 0;
+  }
+  50%{
+      transform: translateX(200px);
+      opacity: 0.5;
+  }
+  75%{
+      transform: translateX(-50px);
+      opacity: 0.75;
+  }
+  100%{
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+
+
+
+
 
 
 /* Skill */
@@ -438,6 +464,13 @@ margin-top: 40px;
     width: 300px;
     height: 500px;
   }
+  .presentation p {
+    font-size: 1.3em;
+  }
+    a {
+      font-size: 1.2em;
+    color: var(--clr--primaryColor);
+    }
 }
 @media screen and (min-width:1020px) {
   .projectContent {
