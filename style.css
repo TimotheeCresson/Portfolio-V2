@@ -144,6 +144,7 @@ width: 7px;
 position: relative;
 margin: auto 40px;
 top: 50px;
+animation: presentationAnime 3s linear 1;
 }
 .presentation p {
 color: var(--clr--primaryColor);
@@ -306,7 +307,20 @@ background: linear-gradient(to right,  rgba(0,255,224,1) 5%, rgba(68,171,157,1) 
   }
 }
 
-
+@keyframes presentationAnime {
+  0%{
+      opacity: 0;
+      transform: scale(1.2);
+  }
+  50%{
+      opacity: 0.5;
+      transform: scale(1.5);
+  }
+  100%{
+      opacity: 1;
+      transform: scale(1);
+  }
+}
 
 
 
@@ -510,6 +524,13 @@ transform: scale(1.2);
       padding: 15px 
     };
 }
+
+@media screen and (min-width:932px) {
+  .presentation p {
+    margin-left: 10px;
+  }
+}
+
 @media screen and (min-width:1020px) {
   .projectContent {
     width: 400px;
