@@ -88,3 +88,6 @@ spans.forEach(async (span) => {
 
     nextButton.addEventListener("click", nextImage);
     prevButton.addEventListener("click", prevImage);
+
+
+    
