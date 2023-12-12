@@ -297,6 +297,15 @@ background: linear-gradient(to right,  rgba(0,255,224,1) 5%, rgba(68,171,157,1) 
   height: 2px; 
   background: linear-gradient(to right,  rgba(0,255,224,1) 5%, rgba(68,171,157,1) 41%, rgba(88,134,128,1) 55%, rgba(87,105,103,1) 72%, rgba(72,74,74,1) 98%);
   }
+  .obstacle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 52%;
+    height: 2px; 
+    background: linear-gradient(to right,  rgba(0,255,224,1) 5%, rgba(68,171,157,1) 41%, rgba(88,134,128,1) 55%, rgba(87,105,103,1) 72%, rgba(72,74,74,1) 98%);
+    }
 .teaStation:hover::after, 
 .ankama:hover::after, 
 .portfolio:hover::after, 
@@ -304,6 +313,7 @@ background: linear-gradient(to right,  rgba(0,255,224,1) 5%, rgba(68,171,157,1) 
 .morpion:hover::after, 
 .justePrix:hover::after,
 .property:hover::after,
+.obstacle:hover::after,
 .shootingProject:hover::after {
   background: linear-gradient(to right, rgba(72,74,74,1) 5%, rgba(118,175,168,1) 52%, rgba(33,255,229,1) 100%, rgba(0,255,224,1) 100%, rgba(38,218,196,0.01) 100%);
 }
